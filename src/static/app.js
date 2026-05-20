@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
             removeButton.className = "remove-participant-btn";
             removeButton.dataset.activity = encodeURIComponent(name);
             removeButton.dataset.email = encodeURIComponent(participant);
-            removeButton.setAttribute("aria-label", "Remove participant");
+            removeButton.setAttribute("aria-label", `Remove ${participant} from activity`);
             removeButton.title = "Unregister participant";
 
             const icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");

@@ -13,7 +13,7 @@ def client() -> TestClient:
 
 @pytest.fixture(autouse=True)
 def reset_activities_state():
-    """Restore in-memory activities after each test for isolation."""
+    """Preserve and restore in-memory activities state for test isolation."""
     baseline = copy.deepcopy(activities)
     yield
     activities.clear()
